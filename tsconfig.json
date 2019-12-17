@@ -1,11 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "$client/*": ["client/*"],
+      "$components/*": ["components/*"],
+      "$modules/*": ["modules/*"],
+      "$fetch": ["utils/request"]
+    },
+    "types": ["node", "react", "react-dom", "webpack-env"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
